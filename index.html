@@ -8,10 +8,10 @@
     <p>正在跳转至 TikTok，请稍候...</p>
     <script>
         // 1. 设置你的目标商品链接 (从我们之前的分析得出)
-        const targetScheme = "snssdk1233://ec/pdp?product_id=1729566317847023678&refer=web";
+        const targetScheme = "snssdk1233://ec/pdp?product_id=1729566317847023678&biz_type=0&need_mall=1&refer=web";
 
         // 2. 设置一个备用的网页版链接 (如果调起App失败，会跳转到这里)
-        const fallbackUrl = "https://www.google.com";
+        const fallbackUrl = "https://www.baidu.com";
 
         // 3. 立即尝试跳转到 App
         window.location.href = targetScheme;
