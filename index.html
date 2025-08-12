@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <p>正在跳转至 TikTok，请稍候...</p>
+    <script>
+        // 1. 设置你的目标商品链接 (从我们之前的分析得出)
+        const targetScheme = "snssdk1233://ec/pdp?product_id=1729566317847023678";
+
+        // 2. 设置一个备用的网页版链接 (如果调起App失败，会跳转到这里)
+        const fallbackUrl = "https://www.tiktok.com/view/product/1729566317847023678";
+
+        // 3. 立即尝试跳转到 App
+        window.location.href = targetScheme;
+
+        // 4. 设置一个2.5秒的计时器作为保险
+        // 如果2.5秒后用户还停留在这个页面，说明App可能没装或调起失败，自动跳转到网页版
+        setTimeout(function() {
+            window.location.href = fallbackUrl;
+        }, 2500);
+    </script>
+</body>
+</html>
